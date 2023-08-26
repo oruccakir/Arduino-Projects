@@ -1,3 +1,6 @@
+# read voltage with cylinder
+
+"""
 import serial
 import time
 import matplotlib.pyplot as plt
@@ -23,3 +26,33 @@ while True:
     tube.length = vol
     vol = round(vol,1)
     lab.text = str(vol)
+"""
+# read voltage with arrow
+
+import serial
+import time
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+try:
+    from vpython import *
+except ZeroDivisionError:
+    print()
+
+arduinoPort = "com7"
+arduinoData = serial.Serial(arduinoPort,"9600")
+time.sleep(1)
+
+arrowLength = 1
+arrowWidth  = .02
+
+myArrow = arrow(lenght = arrowLength, shaftwidth = arrowWidth, color = color.green)
+
+
+while True:
+    # while arduinoData.in_waiting== 0:
+    #     pass
+    # dataPacket = arduinoData.readline()
+    # dataPacket = str(dataPacket,'utf-8')
+    # dataPacket = int(dataPacket.strip('\r\n'))
+    # potVal = dataPacket
+    pass
