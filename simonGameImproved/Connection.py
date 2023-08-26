@@ -1,8 +1,6 @@
 
 import serial
 
-
-
 # Replace 'COMX' with the actual COM port your Arduino is connected to
 arduino_port = 'COM7'  
 
