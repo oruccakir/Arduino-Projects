@@ -3,7 +3,7 @@ import serial
 import time
 import os
 
-arduinoData = serial.Serial("com7",9600);
+arduinoData = serial.Serial("com6",9600);
 
 roomX=12
 roomY=10
